@@ -21,7 +21,7 @@ img {
 
 
 /*Hide tab-desk class*/
-.tab-desk {
+#tab-desk {
     display: none;
 }
 
@@ -63,7 +63,7 @@ nav li a {
 /*Style rules for main content*/
 main {
     padding: 2%;
-    background-color: #e539fc;
+    background-color: #e5e9fc;
     overflow: auto;
     font-family: "Roboto", sans-serif;
 }
@@ -90,7 +90,7 @@ main {
     text-align: center;
 }
 
-.tel-link {
+#tel-link {
     background-color: #373684;
     padding: 2%;
     margin: 0 auto;
@@ -99,7 +99,7 @@ main {
     border-radius: 5px;
 }
 
-.tel-link a {
+#tel-link a {
     color: #fff;
     text-decoration:none;
     font-size: 1.5em;
@@ -112,13 +112,13 @@ main {
     font-weight: bold;
 }
 
-.action {
+#action {
     font-size: 1.25em;
     font-weight: bold;
     text-align: center;
 }
 
-.map {
+#map {
     width: 95%;
     height: 50%;
     border: 5px solid #373684;
@@ -130,3 +130,84 @@ footer {
     font-size: 0.65em;
     clear: left;
  }
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px), print {
+
+    /*Tablet viewport: show tab-desk class, hide mobile class*/
+    .tab-desk {
+        display: block
+    }
+    .mobile {
+        display: none;
+    }
+
+    /*Tablet viewport: Style rule for header content */
+    span.tab-desk {
+        display: inline;
+    }
+
+    /*Tablet viewport: Style rules for nav area*/
+    nav li {
+        border-top: none;
+        display: inline-block;
+        font-size: 1.5em;
+        border-right: 1px solid #e5e9fc;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.25em 0.5em;
+    }
+
+    /*Tablet viewport: style rule for map*/
+    map {
+        width: 500px;
+        height: 450px;
+    }
+}
+
+/*Media Query for desktop viewport*/
+@media screen and (min-width: 769px), print {
+
+    /*Desktop viewport: style rule for header*/
+    header {
+        padding: 2%;
+    }
+
+    /*Desktop viewportL style rules for nav area*/
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+
+    nav li a:hover {
+        color: #373684;
+        background: #e5e9fc;
+    }
+
+    /*Desktop viewport: style rules for main content*/
+    #info ul {
+        margin-left: 5%;
+    }
+
+    main h3 {
+        font-size: 1.5em;
+    }
+
+    #piano, #guitar, #violin {
+        width: 29%;
+        float: left;
+        margin: 0 2%;
+    }
+}
+
+/*Media Query for Print*/
+@media print {
+    body {
+        background: #fff;
+        color: #000;
+    }
+}
