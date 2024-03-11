@@ -21,7 +21,7 @@ img {
 
 
 /*Hide tab-desk class*/
-#tab-desk {
+.tab-desk {
     display: none;
 }
 
@@ -47,7 +47,7 @@ nav ul {
 }
 
 nav li {
-    display: block;
+    display: inline-block;
     font-size: 2em;
     border-top: 1px solid #e5e9fc
 }
@@ -66,6 +66,18 @@ main {
     background-color: #e5e9fc;
     overflow: auto;
     font-family: "Roboto", sans-serif;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+    text-align: center;
 }
 
 #piano, #guitar, #violin {
@@ -90,7 +102,7 @@ main {
     text-align: center;
 }
 
-#tel-link {
+.tel-link {
     background-color: #373684;
     padding: 2%;
     margin: 0 auto;
@@ -99,7 +111,7 @@ main {
     border-radius: 5px;
 }
 
-#tel-link a {
+.tel-link a {
     color: #fff;
     text-decoration:none;
     font-size: 1.5em;
@@ -112,13 +124,7 @@ main {
     font-weight: bold;
 }
 
-#action {
-    font-size: 1.25em;
-    font-weight: bold;
-    text-align: center;
-}
-
-#map {
+.map {
     width: 95%;
     height: 50%;
     border: 5px solid #373684;
@@ -130,6 +136,11 @@ footer {
     font-size: 0.65em;
     clear: left;
  }
+
+footer a {
+    color: #4645a8;
+    text-decoration: none;
+}
 
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px), print {
